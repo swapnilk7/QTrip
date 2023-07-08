@@ -1,3 +1,3 @@
-const config = { backendEndpoint: "https://qtrip-dynamic-sk7.herokuapp.com" };
+const config = { backendEndpoint: "https://qtrip-dynamic-4dhk.onrender.com" };
 
 export default config;

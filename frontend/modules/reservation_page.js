@@ -43,18 +43,22 @@ function addReservationToTable(reservations) {
           year: "numeric",
         })}</td>
         <td scope="col">${obj.price}</td>
-        <td scope="col">${new Date(obj.time).toLocaleString("en-IN", { dateStyle: "long" })}, ${new Date(
-        obj.time
-      ).toLocaleString("en-IN", { timeStyle: "medium" })}</td>
+        <td scope="col">${new Date(obj.time).toLocaleString("en-IN", {
+          dateStyle: "long",
+        })}, ${new Date(obj.time).toLocaleString("en-IN", {
+        timeStyle: "medium",
+      })}</td>
         <td scope="col">
         <button class="reservation-visit-button" id="${obj.id}">
-        <a href="/frontend/pages/adventures/detail/?adventure=${obj.adventure}">
+        <a href="/pages/adventures/detail/?adventure=${obj.adventure}">
         Visit Adventure
         </a>
         </button>
         </td>
       </tr>`;
-      document.getElementById("reservation-table").insertAdjacentHTML("beforeend", element);
+      document
+        .getElementById("reservation-table")
+        .insertAdjacentHTML("beforeend", element);
     });
   } else {
     document.getElementById("reservation-table-parent").style.display = "none";
